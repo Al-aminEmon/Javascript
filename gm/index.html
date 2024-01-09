@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button id="start-btn" onclick="startGame()">Start</button>
+    <button id="change-btn" onclick="changeNumber()">Change Number</button>
+    
+    <button id="change-btn2" onclick="changeNumber()">Change Number</button>
+    <p id="number"></p>
+    <p id="result"></p>
+
+    <script>
+        var num = Math.floor(Math.random() * 10) + 1; 
+
+        function startGame() {
+            document.getElementById("start-btn").style.display = "none";
+            document.getElementById("change-btn").style.display = "block";
+            document.getElementById("number").innerHTML = num;
+        }
+
+        function changeNumber() {
+            num = Math.floor(Math.random() * 10) + 1;
+            document.getElementById("number").innerHTML = num;
+
+            if (num === 10) {
+                document.getElementById("change-btn").style.display = "none";
+                document.getElementById("result").innerHTML = "Game over";
+            }
+        }
+        function changeNumber() {
+            num = Math.floor(Math.random() * 10) + 1;
+            document.getElementById("number").innerHTML = num;
+
+            if (num === 10) {
+                document.getElementById("change-btn2").style.display = "none";
+                document.getElementById("result").innerHTML = "Game over";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
